@@ -16,12 +16,32 @@ namespace DateRanges
 
         public DateTime End { get; set; }
 
+        public DateTimeRange(DateTime date1, DateTime date2)
+        {
+
+        }
+
         /// <summary>
         /// Return value indicating if current range contains whole given range
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
 
+        public DateTime MaxDate(DateTime date1, DateTime date2)
+        {
+            if (date1 > date2)
+                return date1;
+            else
+                return date2;
+        }
+
+        public DateTime MinDate(DateTime date1, DateTime date2)
+        {
+            if (date1 < date2)
+                return date1;
+            else
+                return date2;
+        }
 
 
 
@@ -30,10 +50,15 @@ namespace DateRanges
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        /*public DateTimeRange[] Add(DateTimeRange range)
+        public DateTimeRange[] Add(DateTimeRange range)
         {
+            if (IntersectsWith(range))
+                return new DateTimeRange[] { Merge(range) };
+            else
+                return new DateTimeRange[] { this, range };
+        }
 
-        }*/
+
 
         /// <summary>
         /// Subtracts given range from current range
@@ -55,10 +80,12 @@ namespace DateRanges
         /// If ranges doesn't intersect, they are merged as longest period possible to create
         /// </summary>
         /// <param name="dateRange"></param>
-        ///public DateTimeRange Merge(DateTimeRange dateRange)
-        ///{
-
-        ///}
+        public DateTimeRange Merge(DateTimeRange dateRange)
+        {
+            var startDate = MinDate(this.Start, dateRange.Start);
+            var endDate = MaxDate(this.End, dateRange.End);
+            return new DateTimeRange(startDate, endDate);
+        }
 
         /// <summary>
         /// Expands current range to given date
@@ -75,10 +102,10 @@ namespace DateRanges
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        ///public Boolean IntersectsWith(DateTimeRange range)
-        ///{
+        public Boolean IntersectsWith(DateTimeRange range)
+        {
 
-        ///}
+        }
 
 
 
