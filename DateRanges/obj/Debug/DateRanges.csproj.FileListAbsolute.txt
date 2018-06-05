@@ -1,0 +1,12 @@
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\obj\Debug\DateRanges.csprojResolveAssemblyReference.cache
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\obj\Debug\DateRanges.csproj.CoreCompileInputs.cache
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\bin\Debug\DateRanges.dll
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\bin\Debug\DateRanges.pdb
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\obj\Debug\DateRanges.dll
+F:\Dropbox\it\programowanie\rozmowy\DateRanges\DateRanges\obj\Debug\DateRanges.pdb
+C:\DateRanges\DateRanges\bin\Debug\DateRanges.dll
+C:\DateRanges\DateRanges\bin\Debug\DateRanges.pdb
+C:\DateRanges\DateRanges\obj\Debug\DateRanges.csprojResolveAssemblyReference.cache
+C:\DateRanges\DateRanges\obj\Debug\DateRanges.csproj.CoreCompileInputs.cache
+C:\DateRanges\DateRanges\obj\Debug\DateRanges.dll
+C:\DateRanges\DateRanges\obj\Debug\DateRanges.pdb
