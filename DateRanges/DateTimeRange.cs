@@ -59,19 +59,24 @@ namespace DateRanges
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        //public DateTimeRange[] Subtract(DateTimeRange range)
-        //{
-        //    if (range == null)
-        //        return new DateTimeRange[] { this };
-        //    else if (!IntersectsWith(range))
-        //        return new DateTimeRange[] { this };
+        public DateTimeRange[] Subtract(DateTimeRange range)
+        {
+            if (!IntersectsWith(range))
+                return new DateTimeRange[] { this };
+            if (Contains(range))
+            {
+                var d1 = new DateTimeRange(this.Start, range.Start);
+                var d2 = new DateTimeRange(range.End, this.End);
+                return new DateTimeRange[] { d1, d2 };
+            }
+            else//when given range intersects on the right side of current range
+            {
+                var d1 = new DateTimeRange(this.Start, range.Start);
+                return new DateTimeRange[] { d1 };
+            }
+            //one case left - when given range intersects on the left side of current range
 
-        //}
-
-
-
-
-
+        }
 
         /// <summary>
         /// Merges current range with given range
@@ -90,10 +95,15 @@ namespace DateRanges
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
-        ///public DateTimeRange ExpandTo(DateTime date)
-        ///{
-
-        ///}
+        public DateTimeRange ExpandTo(DateTime date)
+        {
+            if (date >= this.End)
+                return new DateTimeRange(this.Start, date);
+            else if (date <= this.Start)
+                return new DateTimeRange(date, this.End);
+            else
+                return this;
+        }
 
         /// <summary>
         /// Return value indicating if current range intersects with given range
@@ -157,11 +167,6 @@ namespace DateRanges
 
         ///}
 
-        /// <summary>
-        /// Return value indicating if current range contains given date
-        /// </summary>
-        /// <param name="date"></param>
-        /// <returns></returns>
 
 
     }
