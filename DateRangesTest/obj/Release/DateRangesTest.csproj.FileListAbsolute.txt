@@ -1,0 +1,16 @@
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\DateRanges\DateRangesTest\bin\Release\DateRangesTest.dll
+F:\DateRanges\DateRangesTest\bin\Release\DateRangesTest.pdb
+F:\DateRanges\DateRangesTest\bin\Release\DateRanges.dll
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\DateRanges\DateRangesTest\bin\Release\DateRanges.pdb
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\DateRanges\DateRangesTest\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\DateRanges\DateRangesTest\obj\Release\DateRangesTest.csprojResolveAssemblyReference.cache
+F:\DateRanges\DateRangesTest\obj\Release\DateRangesTest.csproj.CoreCompileInputs.cache
+F:\DateRanges\DateRangesTest\obj\Release\DateRangesTest.csproj.CopyComplete
+F:\DateRanges\DateRangesTest\obj\Release\DateRangesTest.dll
+F:\DateRanges\DateRangesTest\obj\Release\DateRangesTest.pdb
