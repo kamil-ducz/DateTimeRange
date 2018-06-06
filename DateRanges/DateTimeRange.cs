@@ -16,6 +16,8 @@ namespace DateRanges
 
         public DateTime End { get; set; }
 
+        //sidekicks
+
         public DateTimeRange(DateTime date1, DateTime date2)
         {
 
@@ -37,8 +39,6 @@ namespace DateRanges
                 return date2;
         }
 
-
-
         /// <summary>
         /// Adds given range to current range
         /// </summary>
@@ -51,8 +51,6 @@ namespace DateRanges
             else
                 return new DateTimeRange[] { this, range };
         }
-
-
 
         /// <summary>
         /// Subtracts given range from current range
@@ -152,22 +150,20 @@ namespace DateRanges
         /// </summary>
         /// <param name="dateRange"></param>
         /// <returns></returns>
-        ///public Boolean IsContinuationOf(DateTimeRange dateRange)
-        ///{
-
-        ///}
+        public Boolean IsContinuationOf(DateTimeRange dateRange)
+        {
+            return this.Start == dateRange.End;
+        }
 
         /// <summary>
         /// Returns value indicating if current range is equal to given range
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        ///public Boolean IsEqualTo(DateTimeRange range)
-        ///{
-
-        ///}
-
-
+        public Boolean IsEqualTo(DateTimeRange range)
+        {
+            return this.Start == range.Start && this.End == range.End;
+        }
 
     }
 }
