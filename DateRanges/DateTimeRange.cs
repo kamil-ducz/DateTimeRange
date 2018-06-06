@@ -21,12 +21,6 @@ namespace DateRanges
 
         }
 
-        /// <summary>
-        /// Return value indicating if current range contains whole given range
-        /// </summary>
-        /// <param name="range"></param>
-        /// <returns></returns>
-
         public DateTime MaxDate(DateTime date1, DateTime date2)
         {
             if (date1 > date2)
@@ -65,10 +59,14 @@ namespace DateRanges
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        ///public DateTimeRange[] Subtract(DateTimeRange range)
-        ///{
+        //public DateTimeRange[] Subtract(DateTimeRange range)
+        //{
+        //    if (range == null)
+        //        return new DateTimeRange[] { this };
+        //    else if (!IntersectsWith(range))
+        //        return new DateTimeRange[] { this };
 
-        ///}
+        //}
 
 
 
@@ -104,7 +102,7 @@ namespace DateRanges
         /// <returns></returns>
         public Boolean IntersectsWith(DateTimeRange range)
         {
-
+            return this.End >= range.Start || this.Start <= range.End;
         }
 
 
@@ -114,20 +112,20 @@ namespace DateRanges
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        ///public Boolean StartsWith(DateTimeRange range)
-        ///{
-
-        ///}
+        public Boolean StartsWith(DateTimeRange range)
+        {
+            return this.Start == range.Start;
+        }
 
         /// <summary>
         /// Returns value indicating if current range ends with given range
         /// </summary>
         /// <param name="range"></param>
         /// <returns></returns>
-        ///public Boolean EndsWith(DateTimeRange range)
-        ///{
-
-        ///}
+        public Boolean EndsWith(DateTimeRange range)
+        {
+            return this.End == range.End;
+        }
 
         /// <summary>
         /// Return value indicating if current range contains whole given range
@@ -136,7 +134,7 @@ namespace DateRanges
         /// <returns></returns>
         public Boolean Contains(DateTimeRange range)
         {
-            return range.Start >= Start && range.End <= End;
+            return range.Start >= this.Start && range.End <= this.End;
         }
 
         /// <summary>
