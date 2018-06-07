@@ -113,6 +113,16 @@ namespace DateRanges
             return this.End >= range.Start || this.Start <= range.End;
         }
 
+        /// <summary>
+        /// Return value indicating if current range contains whole given range
+        /// </summary>
+        /// <param name="range"></param>
+        /// <returns></returns>
+        public Boolean Contains(DateTimeRange range)
+        {
+            return range.Start >= this.Start && range.End <= this.End;
+        }
+
 
 
         /// <summary>
@@ -134,17 +144,7 @@ namespace DateRanges
         {
             return this.End == range.End;
         }
-
-        /// <summary>
-        /// Return value indicating if current range contains whole given range
-        /// </summary>
-        /// <param name="range"></param>
-        /// <returns></returns>
-        public Boolean Contains(DateTimeRange range)
-        {
-            return range.Start >= this.Start && range.End <= this.End;
-        }
-
+        
         /// <summary>
         /// Gets value indicating if current range is continuation of given date time range
         /// </summary>
@@ -152,7 +152,7 @@ namespace DateRanges
         /// <returns></returns>
         public Boolean IsContinuationOf(DateTimeRange dateRange)
         {
-            return this.Start == dateRange.End;
+            return this.Start == dateRange.End || this.End == dateRange.Start;
         }
 
         /// <summary>
